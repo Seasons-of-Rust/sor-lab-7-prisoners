@@ -15,7 +15,6 @@ impl Bot for ZakuArbor {
         let mut rng = rand::thread_rng();
         match history
             .iter()
-            // If the other bot every betrayed, always betray
             .any(|turn| matches!(turn.other_bot, Dilemma::Betray))
         {
             true => silence_acc += 1,

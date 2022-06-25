@@ -2,7 +2,7 @@ use strum_macros::EnumIter;
 
 use self::{
     always_betray::AlwaysBetray, always_silence::AlwaysSilence, angelonfira::AngelOnFira,
-    detective::Detective, fifty_fifty::FiftyFifty, grim_trigger::GrimTrigger, zakuarbor::ZakuArbor
+    detective::Detective, fifty_fifty::FiftyFifty, grim_trigger::GrimTrigger, zakuarbor::ZakuArbor,
 };
 
 mod always_betray;
