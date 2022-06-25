@@ -10,7 +10,7 @@ impl Bot for ZakuArbor {
     }
 
     fn turn(&mut self, history: &[Turn]) -> Dilemma {
-        const silence_baseline: u32 = history.len() as u32 / 2;
+        let silence_baseline: u32 = history.len() as u32 / 2;
         let mut silence_acc: u32 = 0;
         let mut rng = rand::thread_rng();
         match history
