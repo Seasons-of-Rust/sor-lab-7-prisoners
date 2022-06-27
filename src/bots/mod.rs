@@ -11,6 +11,7 @@ mod angelonfira;
 mod detective;
 mod fifty_fifty;
 mod grim_trigger;
+mod Nguyen_HanhNong;
 
 pub trait Bot {
     fn new() -> Self
@@ -39,6 +40,7 @@ pub enum Bots {
     AlwaysBetray,
     GrimTrigger,
     Detective,
+    Nguyen_HanhNong,
 }
 
 impl Bots {
@@ -50,6 +52,7 @@ impl Bots {
             Bots::AlwaysBetray => Box::new(AlwaysBetray::new()),
             Bots::GrimTrigger => Box::new(GrimTrigger::new()),
             Bots::Detective => Box::new(Detective::new()),
+            Bots::Nguyen_HanhNong => Box::new(Nguyen_HanhNong::Nguyen_HanhNong::new()),
         }
     }
 }
