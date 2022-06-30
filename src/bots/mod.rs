@@ -3,6 +3,7 @@ use strum_macros::EnumIter;
 use self::{
     always_betray::AlwaysBetray, always_silence::AlwaysSilence, angelonfira::AngelOnFira,
     detective::Detective, fifty_fifty::FiftyFifty, grim_trigger::GrimTrigger,
+    nguyen_hanh_nong::NguyenHanhNong,
 };
 
 mod always_betray;
@@ -52,7 +53,7 @@ impl Bots {
             Bots::AlwaysBetray => Box::new(AlwaysBetray::new()),
             Bots::GrimTrigger => Box::new(GrimTrigger::new()),
             Bots::Detective => Box::new(Detective::new()),
-            Bots::NguyenHanhNong => Box::new(nguyen_hanh_nong::NguyenHanhNong::new()),
+            Bots::NguyenHanhNong => Box::new(NguyenHanhNong::new()),
         }
     }
 }
