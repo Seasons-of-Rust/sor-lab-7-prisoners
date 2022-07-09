@@ -1,11 +1,13 @@
 use strum_macros::EnumIter;
 
 use self::{
-    always_betray::AlwaysBetray, always_silence::AlwaysSilence, angelonfira::AngelOnFira,
-    detective::Detective, fifty_fifty::FiftyFifty, grim_trigger::GrimTrigger,
-    nguyen_hanh_nong::NguyenHanhNong, williamdual::Williamdual, zakuarbor::ZakuArbor,
+    allie::Allie, always_betray::AlwaysBetray, always_silence::AlwaysSilence,
+    angelonfira::AngelOnFira, detective::Detective, fifty_fifty::FiftyFifty,
+    grim_trigger::GrimTrigger, nguyen_hanh_nong::NguyenHanhNong, williamdual::Williamdual,
+    zakuarbor::ZakuArbor,
 };
 
+mod allie;
 mod always_betray;
 mod always_silence;
 mod angelonfira;
@@ -46,6 +48,7 @@ pub enum Bots {
     NguyenHanhNong,
     ZakuArbor,
     Williamdual,
+    Allie,
 }
 
 impl Bots {
@@ -60,6 +63,7 @@ impl Bots {
             Bots::NguyenHanhNong => Box::new(NguyenHanhNong::new()),
             Bots::ZakuArbor => Box::new(ZakuArbor::new()),
             Bots::Williamdual => Box::new(Williamdual::new()),
+            Bots::Allie => Box::new(Allie::new()),
         }
     }
 }
