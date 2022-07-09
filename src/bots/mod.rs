@@ -3,8 +3,8 @@ use strum_macros::EnumIter;
 use self::{
     allie::Allie, always_betray::AlwaysBetray, always_silence::AlwaysSilence,
     angelonfira::AngelOnFira, detective::Detective, fifty_fifty::FiftyFifty,
-    grim_trigger::GrimTrigger, nguyen_hanh_nong::NguyenHanhNong, williamdual::Williamdual,
-    zakuarbor::ZakuArbor,
+    grim_trigger::GrimTrigger, kjersey::KJersey, nguyen_hanh_nong::NguyenHanhNong,
+    williamdual::Williamdual, zakuarbor::ZakuArbor,
 };
 
 mod allie;
@@ -14,6 +14,7 @@ mod angelonfira;
 mod detective;
 mod fifty_fifty;
 mod grim_trigger;
+mod kjersey;
 mod nguyen_hanh_nong;
 mod williamdual;
 mod zakuarbor;
@@ -31,7 +32,7 @@ pub struct Turn {
     pub other_bot: Dilemma,
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialEq, Eq)]
 pub enum Dilemma {
     Silence,
     Betray,
@@ -49,6 +50,9 @@ pub enum Bots {
     ZakuArbor,
     Williamdual,
     Allie,
+    KJersey,
+    KJerseyHelper1,
+    KJerseyHelper2,
 }
 
 impl Bots {
@@ -64,6 +68,9 @@ impl Bots {
             Bots::ZakuArbor => Box::new(ZakuArbor::new()),
             Bots::Williamdual => Box::new(Williamdual::new()),
             Bots::Allie => Box::new(Allie::new()),
+            Bots::KJersey => Box::new(KJersey::new()),
+            Bots::KJerseyHelper1 => Box::new(kjersey::Helper::new()),
+            Bots::KJerseyHelper2 => Box::new(kjersey::Helper::new()),
         }
     }
 }
