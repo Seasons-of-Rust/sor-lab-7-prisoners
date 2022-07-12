@@ -55,6 +55,7 @@ pub enum Bots {
     KJerseyHelper1,
     KJerseyHelper2,
     Joss,
+    AlanReviews,
 }
 
 impl Bots {
@@ -74,6 +75,7 @@ impl Bots {
             Bots::KJerseyHelper1 => Box::new(kjersey::Helper::new()),
             Bots::KJerseyHelper2 => Box::new(kjersey::Helper::new()),
             Bots::Joss => Box::new(Joss::new()),
+            Bots::AlanReviews => Box::new(AlanReviews::new()),
         }
     }
 }
