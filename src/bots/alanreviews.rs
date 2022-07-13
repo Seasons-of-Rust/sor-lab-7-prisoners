@@ -2,9 +2,7 @@ use super::{Bot, Dilemma, Turn};
 // use rand::Rng;
 
 #[derive(Debug, Default)]
-pub struct AlanReviews {
-
-}
+pub struct AlanReviews {}
 
 impl Bot for AlanReviews {
     fn new() -> Self {
@@ -17,7 +15,7 @@ impl Bot for AlanReviews {
             None => Dilemma::Silence,
         }
         // let iterator = history.iter().rev().take(2);
-        
+
         // Randomly choose between silence and betrayal
         // let mut rng = rand::thread_rng();
         // let number: i32 = rng.gen_range(0..3);
