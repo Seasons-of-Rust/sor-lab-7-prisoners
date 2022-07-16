@@ -1,12 +1,13 @@
 use strum_macros::EnumIter;
 
 use self::{
-    allie::Allie, always_betray::AlwaysBetray, always_silence::AlwaysSilence,
-    angelonfira::AngelOnFira, detective::Detective, fifty_fifty::FiftyFifty,
-    grim_trigger::GrimTrigger, joss::Joss, kjersey::KJersey, nguyen_hanh_nong::NguyenHanhNong,
-    williamdual::Williamdual, zakuarbor::ZakuArbor,
+    alanreviews::AlanReviews, allie::Allie, always_betray::AlwaysBetray,
+    always_silence::AlwaysSilence, angelonfira::AngelOnFira, detective::Detective,
+    fifty_fifty::FiftyFifty, grim_trigger::GrimTrigger, joss::Joss, kjersey::KJersey,
+    nguyen_hanh_nong::NguyenHanhNong, williamdual::Williamdual, zakuarbor::ZakuArbor,
 };
 
+mod alanreviews;
 mod allie;
 mod always_betray;
 mod always_silence;
